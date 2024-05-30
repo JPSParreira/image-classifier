@@ -1,0 +1,6 @@
+# .gitignore for the project
+/.idea
+/data
+/features
+/history
+/models
