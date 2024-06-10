@@ -1,0 +1,14 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Image Classification Result</title>
+</head>
+<body style="text-align: center; font-family: Verdana">
+<h1>Classification Result</h1>
+<img style="margin: auto" src="{{ url_for('send_file', filename=filename) }}" alt="Uploaded Image" width="250" height="250">
+<h2>Predicted Class: {{ label }}</h2>
+<a href="{{ url_for('upload_image') }}">Classify Another Image</a>
+</body>
+</html>
