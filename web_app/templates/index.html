@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Image Classifier</title>
+</head>
+<body>
+<h1>Upload an Image for Classification</h1>
+<form method="post" enctype="multipart/form-data">
+    <input type="file" name="file">
+    <input type="submit" value="Upload">
+</form>
+{% if class_name %}
+    <h2>Predicted class: {{ class_name }}</h2>
+    <img src="{{ url_for('send_file', filename=filename) }}" alt="Uploaded Image" style="width:150px; height:150px;">
+    <form method="get" action="/">
+        <button type="submit">Predict Another Image</button>
+    </form>
+{% endif %}
+</body>
+</html>
